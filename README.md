@@ -16,7 +16,7 @@ AutoQ is a web application built with React and Firebase that simplifies the pro
 
 - **Frontend**: React
 - **Backend**: Firebase (Firestore for database, Authentication)
-- **Styling**: CSS/Styled Components (or any other styling library you choose)
+- **Styling**: TailwindCSS
 
 ## Getting Started
 
