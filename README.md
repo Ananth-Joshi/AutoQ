@@ -32,9 +32,9 @@ AutoQ is a web application built with React and Firebase that simplifies the pro
 
    ```bash
    git clone https://github.com/Ananth-Joshi/autoQ.git
-   cd autoQ
+   cd autoQ```
 2. **Install dependencies**:
-   ```npm install
+   ```npm install```
 3. ### Set up Firebase:
 
   - **Create a new Firebase project**:
@@ -50,6 +50,6 @@ AutoQ is a web application built with React and Firebase that simplifies the pro
    VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
    VITE_FIREBASE_APP_ID=your_app_id
    VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id (optional)
-
+   ```
 4. ###Run the application:
    ```npm run dev
