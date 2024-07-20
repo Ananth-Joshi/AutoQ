@@ -51,5 +51,15 @@ AutoQ is a web application built with React and Firebase that simplifies the pro
    VITE_FIREBASE_APP_ID=your_app_id
    VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id (optional)
    ```
-4. ###Run the application:
-   ```npm run dev
+4. ### Run the application:
+   ```npm run dev```
+
+## Acknowledgments
+
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+- [Firebase](https://firebase.google.com/) - Backend as a Service (BaaS) for real-time data storage and authentication.
+- [DaisyUI](https://daisyui.com/) - A Tailwind CSS component library.
+- [HyperUI](https://hyperui.dev/) - A collection of UI components and templates for Tailwind CSS.
+- [React Query](https://react-query.tanstack.com/) - A data fetching and state management library for React.
+- [React-PDF](https://react-pdf.org/) - A library for generating PDF documents in React applications.
+
