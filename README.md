@@ -54,6 +54,16 @@ AutoQ is a web application built with React and Firebase that simplifies the pro
 4. ### Run the application:
    ```npm run dev```
 
+## Screenshots
+![image](https://github.com/user-attachments/assets/4fe4d768-19a4-467a-b270-573e7e7354a8)
+![image](https://github.com/user-attachments/assets/9c57ab9f-1949-4375-9742-fe06b4f2a89b)
+![image](https://github.com/user-attachments/assets/11db7c99-68f3-413c-b009-5074701e4e6d)
+![image](https://github.com/user-attachments/assets/d665b391-d0cd-4b85-ab67-054971fa461f)
+![image](https://github.com/user-attachments/assets/e379858d-bdcc-48f1-a202-ab50864b60e0)
+![image](https://github.com/user-attachments/assets/9b25c360-808e-47c7-bbd0-3cbd6479b310)
+![image](https://github.com/user-attachments/assets/4c91ea21-ca5c-4e78-840f-8d6642f808d7)
+
+
 ## Acknowledgments
 
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces.
