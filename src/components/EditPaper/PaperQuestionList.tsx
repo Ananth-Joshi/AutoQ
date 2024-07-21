@@ -26,7 +26,7 @@ function PaperQuestionList({paperContent,setPaperContent}:{paperContent:paperTyp
   })
 
   return (
-    <div className="flex flex-col gap-1 items-center justify-center">
+    <div className="flex flex-col gap-1 items-center h-[30rem] justify-center">
       <div className="flex gap-1 items-center justify-between">
         <ChapterSelect setChapter={selectChapter}/>
         <input type="text" placeholder="Search Question..." value={search} onChange={(e)=>{setSearch(e.target.value)}} className="input rounded-xl input-bordered input-primary w-full max-w-xs" />
@@ -38,7 +38,7 @@ function PaperQuestionList({paperContent,setPaperContent}:{paperContent:paperTyp
           <input type="number" placeholder="Q.Marks" value={qMarks} min={1} onChange={(e)=>{setQMarks(e.target.valueAsNumber)}} className="input rounded-xl input-bordered input-primary w-20" />
         </label> 
       </div>
-      <div className="flex flex-col items-center h-[30rem] gap-2 ">
+      <div className="flex flex-col h-full items-center gap-2 ">
         <div className="flex h-full bg-base-100 rounded-xl justify-center w-3/4 overflow-y-auto max-w-[900px]">
             <table
                 className="table-fixed h-fit w-full table-pin-rows text-center divide-y-2 divide-gray-600  bg-base-200 rounded-xl"
