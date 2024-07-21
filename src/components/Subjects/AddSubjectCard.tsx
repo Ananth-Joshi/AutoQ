@@ -4,6 +4,8 @@ import { createSubject } from "../../functions/functions";
 import { auth } from "../../firebase/firebaseconfig";
 import { useParams } from "react-router-dom";
 
+
+//Card to add a subject.
 function AddSubjectCard() {
   const [subjectName,setSubjectName]:[string,React.Dispatch<React.SetStateAction<string>>]=useState('');
   const params=useParams()
@@ -26,9 +28,6 @@ function AddSubjectCard() {
       createSubjectMutation.mutate();
   }
   
-
-
-
   return (
     <div className="card bg-primary text-primary-content rounded-xl w-1/4">
     <form className="card-body" onSubmit={handleSubmit}>

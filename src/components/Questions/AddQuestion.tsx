@@ -4,11 +4,11 @@ import { createQuestion} from "../../functions/functions";
 import { useParams } from "react-router-dom";
 import { auth } from "../../firebase/firebaseconfig";
 
+//Add a new quesrion component.
 function AddQuestion() {
   const [question,setQuestion]=useState('')
   const params=useParams()
   const queryClient=useQueryClient()
-
 
   //Refetch query if user is not found.
   useEffect(()=>(
@@ -26,11 +26,7 @@ function AddQuestion() {
     onSuccess:()=>{queryClient.invalidateQueries({queryKey:['questionList',params.chapterId]});setQuestion('');}
   })
 
-
-
-
-
-//Function to handle submission of new question form.
+  //Function to handle submission of new question form.
   const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     if(question.trim())

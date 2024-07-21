@@ -5,6 +5,8 @@ import { DocumentData } from "firebase/firestore"
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
+
+//List of classes.
 function ClassList() {
   const [className,setClassName]:[string,React.Dispatch<React.SetStateAction<string>>]=useState('');
   const queryClient=useQueryClient();

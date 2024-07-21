@@ -3,6 +3,8 @@ interface propType{
   description:string,
   imageUrl:string
 }
+
+//Card to display features of app.
 function FeatureCards({title,description,imageUrl}:propType) {
   return (
     <div className="card bg-base-100 w-96 shadow-xl hover:bg-base-200">

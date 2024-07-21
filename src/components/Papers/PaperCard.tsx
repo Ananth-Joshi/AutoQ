@@ -3,6 +3,8 @@ import { deletePaper } from "../../functions/functions"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { auth } from "../../firebase/firebaseconfig"
 
+
+//Card to display Paper name.
 function PaperCard({title,paperId}:{title:string,paperId:string}) {
   const params=useParams()
   const navigate=useNavigate() 

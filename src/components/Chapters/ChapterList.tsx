@@ -7,11 +7,11 @@ import { getChapters } from "../../functions/functions"
 import { DocumentData } from "firebase/firestore"
 import ChapterCard from "./ChapterCard"
 
+
+//List of chapter card component
 function ChapterList() {
     const params= useParams()
     const queryClient=useQueryClient()
-
-
     //Refetch query if user is not found.
     useEffect(()=>(
         auth.onAuthStateChanged((user)=>{
@@ -19,8 +19,6 @@ function ChapterList() {
             queryClient.invalidateQueries({queryKey:['chapterList',params.subjectId]})
         }
         })),[])
-
-
 
     //Query to fetch subjects.
     const chapterQuery=useQuery({

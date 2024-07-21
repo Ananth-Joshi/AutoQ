@@ -5,6 +5,7 @@ import {useEffect, useState } from "react"
 import UserSection from "./UserSection"
 import AuthButtons from "./AuthButtons"
 
+//Navbar component.
 function NavBar() {
     const [authenticatedUser,setAuthenticatedUser]=useState<User|null>(null)
     useEffect(()=>{

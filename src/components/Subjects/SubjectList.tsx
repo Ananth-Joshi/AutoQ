@@ -7,10 +7,11 @@ import { DocumentData } from "firebase/firestore";
 import AddSubjectCard from "./AddSubjectCard";
 import { useEffect } from "react";
 
+
+//Component to display list of subjects.
 function SubjectList() {
     const params= useParams()
     const queryClient=useQueryClient()
-
 
     //Refetch query if user is not found.
     useEffect(()=>(

@@ -5,6 +5,8 @@ import { paperType, savePaper } from "../../functions/functions";
 import { auth } from "../../firebase/firebaseconfig";
 
 
+//Component containing header data of the paper (title, subject, max. marks, etc)
+
 function PaperHeader(){
   const params=useParams()
   const queryClient=useQueryClient()
@@ -19,6 +21,7 @@ function PaperHeader(){
   })
 
 
+  //Update the paper header.
 
   const handleSubmit=(e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault();

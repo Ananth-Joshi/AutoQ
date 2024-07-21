@@ -1,5 +1,7 @@
 import { auth } from "../../firebase/firebaseconfig"
 import profilePic from '../../assets/profile.jpeg'
+
+//User profile pic section of navbar if user is logged in.
 function UserSection() {
   return (
     <div className="dropdown dropdown-end">

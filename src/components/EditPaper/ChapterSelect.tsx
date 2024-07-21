@@ -4,6 +4,8 @@ import { getChapters } from "../../functions/functions";
 import { auth } from "../../firebase/firebaseconfig";
 import React, { useEffect } from "react";
 
+
+//Function to select chapters to display questions.
 function ChapterSelect({setChapter}:{setChapter:React.Dispatch<React.SetStateAction<string|null>>}) {
 
   const params=useParams() 
@@ -18,7 +20,7 @@ function ChapterSelect({setChapter}:{setChapter:React.Dispatch<React.SetStateAct
     })),[])
 
 
-  //Query to fetch subjects.
+  //Query to fetch chapters.
   const chapterQuery=useQuery({
     queryKey:[`chapterList`,params.subjectId],
     queryFn:async()=>{

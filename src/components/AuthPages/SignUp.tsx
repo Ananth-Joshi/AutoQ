@@ -4,13 +4,14 @@ import { auth } from "../../firebase/firebaseconfig";
 import { Link } from "react-router-dom";
 import { createUserDocument } from "../../functions/functions";
 
+//Sign up page component.
 function SignUp() { 
- 
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [confirmPassword,setConfirmPassword]=useState('')
   const [error,setError]=useState<String|null>(null)
 
+  //function to handle sign up.
   const handleSignUp=async (event:React.FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
     await setPersistence(auth,browserSessionPersistence)

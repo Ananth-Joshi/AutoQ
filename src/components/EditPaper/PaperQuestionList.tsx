@@ -7,6 +7,7 @@ import { auth } from "../../firebase/firebaseconfig";
 import { DocumentData } from "firebase/firestore";
 
 
+//List of questions of the selected chapter for adding to question paper.
 function PaperQuestionList({paperContent,setPaperContent}:{paperContent:paperType,setPaperContent:React.Dispatch<React.SetStateAction<paperType>>}) {
   const [chapter,selectChapter]:[string|null,React.Dispatch<React.SetStateAction<string|null>>]=useState<string|null>(null)
   const params=useParams()

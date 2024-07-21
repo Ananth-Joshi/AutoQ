@@ -5,6 +5,7 @@ import { auth } from "../../firebase/firebaseconfig";
 import { DocumentData } from "firebase/firestore";
 import { useState } from "react";
 
+//Component to list the questions of a chapter.
 function QuestionsList() {
   const params= useParams()
   const [search,setSearch]=useState('')
@@ -31,9 +32,6 @@ function QuestionsList() {
         onSuccess:()=>{queryClient.invalidateQueries({queryKey:['questionList',params.chapterId]})}
       })
     
-    
-  
-
   return (
     <div className="flex flex-col h-3/4 items-center gap-2 w-3/4">
     <input type="text" placeholder="Search Question..." value={search} onChange={(e)=>{setSearch(e.target.value)}} className="input rounded-xl input-bordered input-primary w-full max-w-xs" />

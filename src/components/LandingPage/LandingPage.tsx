@@ -7,10 +7,10 @@ import image3 from '/landing3.jpeg'
 import image4 from '/landing4.jpeg'
 import { auth } from "../../firebase/firebaseconfig"
 import { useNavigate } from "react-router-dom"
+
+//Landing page component.
 function LandingPage() { 
-
   const navigate=useNavigate()
-
 
   //Navigate to classes page if user is logged in.
   useEffect(()=>(
@@ -19,7 +19,6 @@ function LandingPage() {
       navigate('/classes')
     }
     })),[])
-
 
   return (
     <>

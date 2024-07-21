@@ -7,10 +7,10 @@ import { getPapersList } from "../../functions/functions"
 import { DocumentData } from "firebase/firestore"
 import PaperCard from "./PaperCard"
 
+//List of question Paper.
 function PaperList() {
   const params= useParams()
   const queryClient=useQueryClient()
-
 
   //Refetch query if user is not found.
   useEffect(()=>(
@@ -19,8 +19,6 @@ function PaperList() {
           queryClient.invalidateQueries({queryKey:['paperList',params.subjectId]})
       }
       })),[])
-
-
 
   //Query to fetch papers.
   const paperQuery=useQuery({

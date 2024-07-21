@@ -3,13 +3,15 @@ import React, { useState } from 'react'
 import { auth } from '../../firebase/firebaseconfig'
 import { Link, useNavigate } from 'react-router-dom'
 
+
+//Login Page component.
 function LogIn() {
-  
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [error,setError]=useState<String|null>(null)
     const navigate=useNavigate();
 
+    //function to handle login,
     const handleLogIn=async (event:React.FormEvent<HTMLFormElement>)=>{
       event.preventDefault()
       await setPersistence(auth,browserSessionPersistence)

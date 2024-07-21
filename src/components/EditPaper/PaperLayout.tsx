@@ -1,7 +1,7 @@
 import {Page,Text,View,StyleSheet, Document, Font} from '@react-pdf/renderer'
 import { paperType } from '../../functions/functions';
 
-
+//Style for paper PDF.
 const styles = StyleSheet.create({
   page: {
       padding: 36, // 0.5 inch padding
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
   },
 });
 
+//Layout for paper generation.
 function PaperLayout({paper}:{paper:paperType}) {
   return (
     <Document>

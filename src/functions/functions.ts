@@ -1,6 +1,7 @@
 import { collection, deleteDoc, doc, getDoc, getDocs, setDoc } from "firebase/firestore"
 import { db } from "../firebase/firebaseconfig"
 
+//Interface for body of question paper (List of questions and headings).
 export interface paperContentInterface{
     qNumber?:number,
     type:'question'|'heading',
@@ -8,6 +9,7 @@ export interface paperContentInterface{
     marks?:string
   }
 
+//Type for Question paper.
 export interface paperType{
     name:string,
     title:string,
@@ -18,8 +20,6 @@ export interface paperType{
     body:Array<paperContentInterface>
 
 }
-
-
 
 //Function to create a document for storing each users data seperately with their uid and email fields.
 export const createUserDocument=async(email:string|null,uid:string)=>{

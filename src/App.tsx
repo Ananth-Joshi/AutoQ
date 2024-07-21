@@ -23,9 +23,11 @@ function App() {
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/classes' element={<Classes/>}>
+            {/* Maps to class page outlet */}
             <Route path=':classId' element={<SubjectList/>}/>
           </Route>
           <Route path='/classes/:classId/subjects/:subjectId' element={<SubjectDetail/>}>
+            {/* Maps to Subject details outlet */ }
             <Route path='chapters' element={<ChapterList/>}/>
             <Route path='papers' element={<PaperList/>}/>
           </Route>

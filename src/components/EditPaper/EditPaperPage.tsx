@@ -8,7 +8,7 @@ import PaperQuestionList from "./PaperQuestionList"
 import PaperContentList from "./PaperContentList"
 
 
-
+//Page to edit a question paper
 function EditPaperPage() {
 
   const params=useParams()
@@ -24,6 +24,8 @@ function EditPaperPage() {
             }
     })),[])
 
+
+  //Query to fetch question paper.
   useQuery({
       queryKey:['questionPaper',params.paperId],
       queryFn:async()=>{

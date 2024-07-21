@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 
+//Page not found component.
 function PageNotFound() {
   return (
     <div className="grid h-[calc(100vh-90px)] place-content-center">

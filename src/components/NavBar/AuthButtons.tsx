@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 
+//Buttons for Navigating to authentication page if user is not logged in.
 function AuthButtons() {
   return (
     <div className='flex gap-2'>

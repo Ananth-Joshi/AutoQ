@@ -3,6 +3,8 @@ import { deleteChapter } from "../../functions/functions"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { auth } from "../../firebase/firebaseconfig"
 
+
+//Chapter display card.
 function ChapterCard({title,chapterId}:{title:string,chapterId:string}) {
   const params=useParams()
   const navigate=useNavigate() 

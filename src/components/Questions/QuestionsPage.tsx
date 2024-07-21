@@ -1,6 +1,7 @@
 import AddQuestion from './AddQuestion'
 import QuestionsList from './QuestionsList'
 
+//Page to display and add questions.
 function QuestionsPage() {
   return (
     <div className='flex h-[calc(100vh-90px)] w-full'>

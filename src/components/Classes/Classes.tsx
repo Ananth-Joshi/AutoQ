@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { auth } from "../../firebase/firebaseconfig"
 import { useQueryClient } from "@tanstack/react-query"
 
+//Class Page component.
 function Classes() {
   const navigate=useNavigate()
   const queryClient=useQueryClient()
@@ -19,8 +20,8 @@ function Classes() {
     })),[])
   return (
     <div className='flex gap-3 h-[calc(100vh-90px)]'>
-      <ClassList/>
-      <Outlet/>
+      <ClassList/> {/*List of classes*/}
+      <Outlet/>    {/*Outlet for displaying subjectList component for corresponding class*/}
     </div>
   )
 }

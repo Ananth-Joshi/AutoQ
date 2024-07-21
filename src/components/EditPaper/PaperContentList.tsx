@@ -6,7 +6,7 @@ import { ImPrinter } from "react-icons/im";
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PaperLayout from "./PaperLayout"
 
-
+//Component to display the content(questions and headings) in the question paper.
 function PaperContentList({paperContent,setPaperContent}:{paperContent:paperType,setPaperContent:React.Dispatch<React.SetStateAction<paperType>>}) 
 {
   const [heading,setHeading]=useState('')
@@ -30,8 +30,7 @@ function PaperContentList({paperContent,setPaperContent}:{paperContent:paperType
                 }}>Save Paper</button>
             <PDFDownloadLink className="btn bg-blue-600 rounded-xl hover:bg-blue-700" document={<PaperLayout paper={paperContent}/>} fileName="paper.pdf">
             Print Paper<ImPrinter size={20} />
-
-            </PDFDownloadLink>
+            </PDFDownloadLink>{/* Prints the paper. */}
         </div>
         <div className="flex relative top-2 h-full bg-base-100 rounded-xl justify-center w-3/4 overflow-y-auto max-w-[900px]">
             <table

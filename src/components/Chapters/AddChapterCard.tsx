@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { createChapter } from '../../functions/functions';
 import { auth } from '../../firebase/firebaseconfig';
 
+//Card to add new chapter.
 function AddChapterCard() {
   const [chapterName,setChapterName]:[string,React.Dispatch<React.SetStateAction<string>>]=useState('');
   const params=useParams()

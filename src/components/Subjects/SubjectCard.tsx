@@ -3,11 +3,8 @@ import { deleteSubject } from "../../functions/functions"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { auth } from "../../firebase/firebaseconfig"
 
-
-
-
+//Card to display subject.
 function SubjectCard({title,subjectId}:{title:string,subjectId:string}) {
-
   const queryClient=useQueryClient()
   const params=useParams()
   const navigate=useNavigate()
@@ -20,8 +17,6 @@ function SubjectCard({title,subjectId}:{title:string,subjectId:string}) {
     },
     onSuccess:()=>{queryClient.invalidateQueries({queryKey:['subjectOfClass',params.classId]})}
   })
-
-
 
   return (
     <div className="card bg-neutral text-neutral-content w-1/4 rounded-xl">

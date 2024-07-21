@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom';
 import { createPaper } from '../../functions/functions';
 import { auth } from '../../firebase/firebaseconfig';
 
+
+//Card component to create new paper.
 function AddPaperCard() {
   const [paperName,setPaperName]:[string,React.Dispatch<React.SetStateAction<string>>]=useState('');
-  
   const params=useParams()
   const queryClient=useQueryClient()
-
 
 //Mutation to create new paper.
   const createPaperMutation=useMutation({
@@ -27,9 +27,6 @@ function AddPaperCard() {
       createPaperMutation.mutate();
   }
   
-
-
-
   return (
     <div className="card bg-primary text-primary-content rounded-xl w-1/4">
     <form className="card-body" onSubmit={handleSubmit}>
