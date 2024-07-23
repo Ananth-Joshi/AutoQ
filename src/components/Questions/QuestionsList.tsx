@@ -50,7 +50,7 @@ function QuestionsList() {
             <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
             {
                 questionQuery.data?.filter(q=>q.data().question.toLowerCase().includes(search.toLowerCase())).map((q:DocumentData,index)=>(
-                <tr>
+                <tr key={index}>
                     <td className="text-center">{index+1}</td>
                     <td className="break-all px-4 py-2 font-medium">{q.data().question}</td>
                     <td className="whitespace-nowrap px-4 py-2">
