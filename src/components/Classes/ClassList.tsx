@@ -51,7 +51,7 @@ function ClassList() {
   
 
   return (
-    <div className='flex md:ml-10 lg:ml-10 flex-col h-[calc(100vh-6rem)] items-center flex-wrap bg-base-300 dark: w-1/3 p-4 rounded-3xl'>
+    <div className='flex md:ml-10 lg:ml-10 flex-col h-[calc(100vh-6rem)] items-center bg-base-300 dark: w-1/3 p-4 rounded-3xl'>
         <div className='text-2xl my-2'>CLASSES</div>
         <ul className="menu-vertical bg-base-200 rounded-box w-3/4 max-w-3/4 overflow-y-scroll p-2 h-5/6 text-2xl">
         {
