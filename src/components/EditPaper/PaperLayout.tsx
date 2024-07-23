@@ -1,4 +1,4 @@
-import {Page,Text,View,StyleSheet, Document, Font} from '@react-pdf/renderer'
+import {Page,Text,View,StyleSheet, Document} from '@react-pdf/renderer'
 import { paperType } from '../../functions/functions';
 
 //Style for paper PDF.

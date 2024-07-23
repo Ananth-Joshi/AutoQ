@@ -3,15 +3,27 @@ import { paperType, savePaper } from "../../functions/functions"
 import { auth } from "../../firebase/firebaseconfig"
 import { useParams } from "react-router-dom"
 import { ImPrinter } from "react-icons/im";
-import { PDFDownloadLink } from "@react-pdf/renderer"
+import { pdf, PDFDownloadLink } from "@react-pdf/renderer"
 import PaperLayout from "./PaperLayout"
+
+
 
 //Component to display the content(questions and headings) in the question paper.
 function PaperContentList({paperContent,setPaperContent}:{paperContent:paperType,setPaperContent:React.Dispatch<React.SetStateAction<paperType>>}) 
 {
   const [heading,setHeading]=useState('')
   const params=useParams()
+  
+  const handleOpenPDF = async () => {
+    // Generate the PDF document
+    const blob = await pdf(<PaperLayout paper={paperContent} />).toBlob();
 
+    // Create a URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Open the PDF in a new window
+    window.open(url, '_blank');
+};
 
   return (
     <div className="flex relative top-3 flex-col items-center h-[30rem] gap-2 ">
@@ -31,6 +43,7 @@ function PaperContentList({paperContent,setPaperContent}:{paperContent:paperType
             <PDFDownloadLink className="btn bg-blue-600 rounded-xl hover:bg-blue-700" document={<PaperLayout paper={paperContent}/>} fileName="paper.pdf">
             Print Paper<ImPrinter size={20} />
             </PDFDownloadLink>{/* Prints the paper. */}
+            <button className="btn btn-primary rounded-xl bg-lime-600 hover:bg-lime-700 " onClick={handleOpenPDF}>View</button>
         </div>
         <div className="flex relative top-2 h-full bg-base-100 rounded-xl justify-center w-3/4 overflow-y-auto max-w-[900px]">
             <table
